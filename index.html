@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="http://js.arcgis.com/3.6/js/dojo/dijit/themes/claro/claro.css">
+<link rel="stylesheet" href="http://js.arcgis.com/3.6/js/esri/css/esri.css">
+
+<script>
+     var dojoConfig = { 
+        paths: {
+          extras: location.pathname.replace(/\/[^/]+$/, "") + "/extras"
+        }
+      };
+</script>
+<script src="http://js.arcgis.com/3.6/"></script>
+
+<script>
+require([ "extras/MyHorizontalSlider", "dojo/domReady!" ], function(MyHorizontalSlider){
+	var mhs = new MyHorizontalSlider({
+		id: "hello",
+		pageNode: "mySliderValue" //My custom horizontal slider property
+	}).placeAt(document.body); //Place custom horizontal slider widget in the document body
+});
+</script>
+</head>
+
+<body class="claro">
+	<div id="mySliderValue"></div>
+</body>
+</html>
